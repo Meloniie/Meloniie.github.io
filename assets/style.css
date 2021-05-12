@@ -1,0 +1,104 @@
+*{
+    user-select: none;
+}
+
+#mineOre {
+    position: absolute;
+    width: 250;
+    height: 75;
+    font-size: 20px;
+    bottom: 8px;
+    cursor: pointer;
+}
+
+#smeltOre {
+    position: absolute;
+    left: 267px;
+    width: 250;
+    height: 75;
+    font-size: 20px;
+    bottom: 8px;
+    cursor: pointer;
+}
+
+#mineCoal {
+    position: absolute;
+    left: 527px;
+    width: 250;
+    height: 75;
+    font-size: 20px;
+    bottom: 8px;
+    cursor: pointer;
+}
+
+#mineSpeed {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin: 8px;
+    width: 300;
+    height: 100;
+    font-size: 27px;
+    border: 3px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#mineSpdText {
+    margin: 4px;
+}
+
+#mineSpdCost {
+    margin: 4px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+#smeltSpeed {
+    position: absolute;
+    top: 18.5%;
+    right: 0%;
+    margin: 8px;
+    width: 300;
+    height: 100;
+    font-size: 27px;
+    border: 3px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#smeltSpdText {
+    margin: 4px;
+}
+
+#smeltSpdCost {
+    margin: 4px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+#fuelUsage {
+    position: absolute;
+    top: 37%;
+    right: 0%;
+    margin: 8px;
+    width: 300;
+    height: 100;
+    font-size: 27px;
+    border: 3px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#FusageText {
+    margin: 4px;
+}
+
+#FusageCost {
+    margin: 4px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="assets/style.css">
+
+<title>Machine Idle - v0.1 BETA</title>
+
+<div id="ironOre" style="font-size: xx-large;"></div>
+<div id="coal" style="font-size: xx-large;"></div>
+<div id="ironIngots" style="font-size: xx-large;"></div>
+
+<button id="mineOre" onclick="mineOre()">Mine Iron Ore</button>
+<button id="mineCoal" onclick="mineCoal()">Mine Coal</button>
+<button id="smeltOre" onclick="smeltOre()" disabled="true">Smelt Iron Ore</button>
+
+<div id="mineSpeed" onclick="mineSpeed.Buy()">
+    <div id="mineSpdText"></div>
+    <div id="mineSpdCost"></div>
+</div>
+
+<div id="smeltSpeed" onclick="smeltSpeed.Buy()">
+    <div id="smeltSpdText"></div>
+    <div id="smeltSpdCost"></div>
+</div>
+
+<div id="fuelUsage" onclick="fuelUsageUpgrade.Buy()">
+    <div id="FusageText"></div>
+    <div id="FusageCost"></div>
+</div>
+
+<script src="assets/main.js"></script>
