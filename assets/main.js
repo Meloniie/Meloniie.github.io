@@ -138,15 +138,15 @@ async function smeltOre() {
 }
 
 window.setInterval(function() {
-    document.getElementById("ironOre").innerHTML = `${toExponential(Items.Ores.Iron)} Iron Ore`
-    document.getElementById("coal").innerHTML = `${toExponential(Items.Fuel.Coal)} Coal`
-    document.getElementById("ironIngots").innerHTML = `${toExponential(Items.Ingots.Iron)} Iron Ingots`
+    document.getElementById("ironOre").innerHTML = `${Items.Ores.Iron.toExponential()} Iron Ore`
+    document.getElementById("coal").innerHTML = `${Items.Fuel.Coal.toExponential()} Coal`
+    document.getElementById("ironIngots").innerHTML = `${Items.Ingots.Iron.toExponential()} Iron Ingots`
     document.getElementById("mineSpdText").innerHTML = mineSpeed.name
-    document.getElementById("mineSpdCost").innerHTML = toExponential(mineSpeed.cost + ' ' + mineSpeed.costType)
+    document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost + ' ' + mineSpeed.costType.toExponential()
     document.getElementById("smeltSpdText").innerHTML = smeltSpeed.name
-    document.getElementById("smeltSpdCost").innerHTML = toExponential(smeltSpeed.cost + ' ' + smeltSpeed.costType)
+    document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost + ' ' + smeltSpeed.costType.toExponential()
     document.getElementById("FusageText").innerHTML = fuelUsageUpgrade.name
-    document.getElementById("FusageCost").innerHTML = toExponential(fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType)
+    document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType.toExponential()
     if (Items.Ores.Iron > 0 && Items.Fuel.Coal >= fuelUsage && smelting == false) {
         document.getElementById("smeltOre").disabled = false
     } else {
