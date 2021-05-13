@@ -76,13 +76,13 @@ const fuelUsageUpgrade = new Module(3, 0, "Iron Ingots", "Fuel Usage (Smelting) 
     fuelUsage.cost = Math.ceil(fuelUsage.cost *= 3)
     fuelUsageUpgrade.level += 1
     document.getElementById("smeltOre").innerHTML = `Smelt Iron Ore (${fuelUsage} Coal)`
-    if (fuenUsageUpgrade.level == 4) {
-        fuenUsageUpgrade.Buy = function() {
+    if (fuelUsageUpgrade.level == 4) {
+        fuelUsageUpgrade.Buy = function() {
             return;
         }
-        fuenUsageUpgrade.name = "Fuel Usage (Smelting) - (MAXED)"
-        fuenUsageUpgrade.cost = ""
-        fuenUsageUpgrade.costType = ""
+        fuelUsageUpgrade.name = "Fuel Usage (Smelting) - (MAXED)"
+        fuelUsageUpgrade.cost = ""
+        fuelUsageUpgrade.costType = ""
     }
 })
 
