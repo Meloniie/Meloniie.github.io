@@ -142,11 +142,11 @@ window.setInterval(function() {
     document.getElementById("coal").innerHTML = `${Items.Fuel.Coal.toExponential()} Coal`
     document.getElementById("ironIngots").innerHTML = `${Items.Ingots.Iron.toExponential()} Iron Ingots`
     document.getElementById("mineSpdText").innerHTML = mineSpeed.name
-    document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost + ' ' + mineSpeed.costType.toExponential()
+    document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost.toExponential() + ' ' + mineSpeed.costType
     document.getElementById("smeltSpdText").innerHTML = smeltSpeed.name
-    document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost + ' ' + smeltSpeed.costType.toExponential()
+    document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost.toExponential() + ' ' + smeltSpeed.costType
     document.getElementById("FusageText").innerHTML = fuelUsageUpgrade.name
-    document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType.toExponential()
+    document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost.toExponential() + ' ' + fuelUsageUpgrade.costType
     if (Items.Ores.Iron > 0 && Items.Fuel.Coal >= fuelUsage && smelting == false) {
         document.getElementById("smeltOre").disabled = false
     } else {
