@@ -73,7 +73,7 @@ const smeltSpeed = new Module(2, 0, "Iron Ingots", "Smelting Speed +", function(
 
 const fuelUsageUpgrade = new Module(3, 0, "Iron Ingots", "Fuel Usage (Smelting) -", function() {
     fuelUsage--
-    fuelUsage.cost = Math.ceil(smeltSpeed.cost *= 3)
+    fuelUsage.cost = Math.ceil(fuelUsage.cost *= 3)
     fuelUsageUpgrade.level += 1
     document.getElementById("smeltOre").innerHTML = `Smelt Iron Ore (${fuelUsage} Coal)`
     if (fuenUsageUpgrade.level == 4) {
@@ -88,6 +88,7 @@ const fuelUsageUpgrade = new Module(3, 0, "Iron Ingots", "Fuel Usage (Smelting) 
 
 async function mineOre() {
     document.getElementById("mineOre").disabled = true
+    document.getElementById("mineCoal").disabled = true
     document.getElementById("smeltOre").disabled = true
     document.getElementById("mineOre").innerHTML = `Initiating Mining...`
     await sleep(mineTime / 2)
@@ -100,6 +101,7 @@ async function mineOre() {
     Items.Ores.Iron++
     document.getElementById("mineOre").disabled = false
     document.getElementById("smeltOre").disabled = false
+    document.getElementById("mineCoal").disabled = false
     document.getElementById("mineOre").innerHTML = `Mine Iron Ore`
 }
 
@@ -138,15 +140,15 @@ async function smeltOre() {
 }
 
 window.setInterval(function() {
-    document.getElementById("ironOre").innerHTML = `${Items.Ores.Iron} Iron Ore`
-    document.getElementById("coal").innerHTML = `${Items.Fuel.Coal} Coal`
-    document.getElementById("ironIngots").innerHTML = `${Items.Ingots.Iron} Iron Ingots`
+    document.getElementById("ironOre").innerHTML = `${toExponential(Items.Ores.Iron)} Iron Ore`
+    document.getElementById("coal").innerHTML = `${toExponential(Items.Fuel.Coal)} Coal`
+    document.getElementById("ironIngots").innerHTML = `${toExponential(Items.Ingots.Iron)} Iron Ingots`
     document.getElementById("mineSpdText").innerHTML = mineSpeed.name
-    document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost + ' ' + mineSpeed.costType
+    document.getElementById("mineSpdCost").innerHTML = toExponential(mineSpeed.cost + ' ' + mineSpeed.costType)
     document.getElementById("smeltSpdText").innerHTML = smeltSpeed.name
-    document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost + ' ' + smeltSpeed.costType
+    document.getElementById("smeltSpdCost").innerHTML = toExponential(smeltSpeed.cost + ' ' + smeltSpeed.costType)
     document.getElementById("FusageText").innerHTML = fuelUsageUpgrade.name
-    document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType
+    document.getElementById("FusageCost").innerHTML = toExponential(fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType)
     if (Items.Ores.Iron > 0 && Items.Fuel.Coal >= fuelUsage && smelting == false) {
         document.getElementById("smeltOre").disabled = false
     } else {
