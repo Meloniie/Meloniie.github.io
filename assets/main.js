@@ -74,7 +74,7 @@ const smeltSpeed = new Module(2, 0, "Iron Ingots", "Smelting Speed +", function(
 
 const fuelUsageUpgrade = new Module(3, 0, "Iron Ingots", "Fuel Usage (Smelting) -", function() {
     fuelUsage--
-    fuelUsage.cost = Math.ceil(fuelUsage.cost *= 3)
+    fuelUsageUpgrade.cost = Math.ceil(fuelUsageUpgrade.cost *= 3)
     fuelUsageUpgrade.level += 1
     document.getElementById("smeltOre").innerHTML = `Smelt Iron Ore (${fuelUsage} Coal)`
     if (fuelUsageUpgrade.level == 4) {
