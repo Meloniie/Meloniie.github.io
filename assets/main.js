@@ -168,7 +168,7 @@ window.setInterval(function() {
     }
     document.getElementById("FusageText").innerHTML = fuelUsageUpgrade.name
     if (fuelUsageUpgrade.cost >= 1000000) {
-        document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType
+        document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost.toExponential() + ' ' + fuelUsageUpgrade.costType
     } else {
         document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType
     }
