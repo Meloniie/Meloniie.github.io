@@ -89,7 +89,6 @@ const fuelUsageUpgrade = new Module(3, 0, "Iron Ingots", "Fuel Usage (Smelting) 
 async function mineOre() {
     document.getElementById("mineOre").disabled = true
     document.getElementById("mineCoal").disabled = true
-    document.getElementById("smeltOre").disabled = true
     document.getElementById("mineOre").innerHTML = `Initiating Mining...`
     await sleep(mineTime / 2)
     var countdown = mineTime/1000
@@ -100,7 +99,6 @@ async function mineOre() {
     }
     Items.Ores.Iron++
     document.getElementById("mineOre").disabled = false
-    document.getElementById("smeltOre").disabled = false
     document.getElementById("mineCoal").disabled = false
     document.getElementById("mineOre").innerHTML = `Mine Iron Ore`
 }
