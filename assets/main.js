@@ -172,7 +172,6 @@ window.setInterval(function() {
     } else {
         document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType
     }
-    document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost.toExponential() + ' ' + fuelUsageUpgrade.costType
     if (Items.Ores.Iron > 0 && Items.Fuel.Coal >= fuelUsage && smelting == false) {
         document.getElementById("smeltOre").disabled = false
     } else {
