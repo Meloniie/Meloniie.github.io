@@ -139,39 +139,15 @@ async function smeltOre() {
 }
 
 window.setInterval(function() {
-    if (Items.Ores.Iron >= 1000000) {
-        document.getElementById("ironOre").innerHTML = `${Items.Ores.Iron.toExponential()} Iron Ore`
-    } else {
-        document.getElementById("ironOre").innerHTML = `${Items.Ores.Iron} Iron Ore`
-    }
-    if (Items.Fuel.Coal >= 1000000) {
-        document.getElementById("coal").innerHTML = `${Items.Fuel.Coal.toExponential()} Coal`
-    } else {
-        document.getElementById("coal").innerHTML = `${Items.Fuel.Coal} Coal`
-    }
-    if (Items.Ingots.Iron >= 1000000) {
-        document.getElementById("ironIngots").innerHTML = `${Items.Ingots.Iron.toExponential()} Iron Ingots`
-    } else {
-        document.getElementById("ironIngots").innerHTML = `${Items.Ingots.Iron} Iron Ingots`
-    }
+    document.getElementById("ironOre").innerHTML = `${Items.Ores.Iron} Iron Ore`
+    document.getElementById("coal").innerHTML = `${Items.Fuel.Coal} Coal`
+    document.getElementById("ironIngots").innerHTML = `${Items.Ingots.Iron} Iron Ingots`
     document.getElementById("mineSpdText").innerHTML = mineSpeed.name
-    if (mineSpeed.cost >= 1000000) {
-        document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost.toExponential() + ' ' + mineSpeed.costType
-    } else {
-        document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost + ' ' + mineSpeed.costType
-    }
+    document.getElementById("mineSpdCost").innerHTML = mineSpeed.cost + ' ' + mineSpeed.costType
     document.getElementById("smeltSpdText").innerHTML = smeltSpeed.name
-    if (smeltSpeed.cost >= 1000000) {
-        document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost.toExponential() + ' ' + smeltSpeed.costType
-    } else {
-        document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost + ' ' + smeltSpeed.costType
-    }
+    document.getElementById("smeltSpdCost").innerHTML = smeltSpeed.cost + ' ' + smeltSpeed.costType
     document.getElementById("FusageText").innerHTML = fuelUsageUpgrade.name
-    if (fuelUsageUpgrade.cost >= 1000000) {
-        document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost.toExponential() + ' ' + fuelUsageUpgrade.costType
-    } else {
-        document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType
-    }
+    document.getElementById("FusageCost").innerHTML = fuelUsageUpgrade.cost + ' ' + fuelUsageUpgrade.costType
     if (Items.Ores.Iron > 0 && Items.Fuel.Coal >= fuelUsage && smelting == false) {
         document.getElementById("smeltOre").disabled = false
     } else {
